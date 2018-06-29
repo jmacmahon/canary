@@ -1,4 +1,4 @@
-import { random } from '../util'
+import { random } from '../random'
 import { DataStore, User } from '../../src/dataStore'
 import { expect } from 'chai'
 
@@ -30,7 +30,7 @@ describe('data store', () => {
       }
       dataStore.register(registrationData)
 
-      expect(dataStore.getUserByUserName('boshea')).to.deep.equal(registrationData)
+      expect(dataStore.getUserByUserName('boshea')).to.containSubset(registrationData)
     })
 
     it('should return undefined for no user', () => {

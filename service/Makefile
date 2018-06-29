@@ -9,7 +9,7 @@ build:
 	./node_modules/.bin/tsc
 
 unit:
-	mocha "build/test/unit/**/*.test.js"
+	mocha build/test/bootstrap.js "build/test/unit/**/*.test.js"
 
 lint:
 	./node_modules/.bin/tslint --config tslint.json --project ./ --fix
