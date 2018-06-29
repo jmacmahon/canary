@@ -5,9 +5,15 @@
     ],
     "alwaysStrict": true,
     "strictNullChecks": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "outDir": "./build",
+    "rootDir": "./",
   },
-  "files": [
-    "src/index.ts"
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
