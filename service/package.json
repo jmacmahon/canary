@@ -1,0 +1,33 @@
+{
+  "name": "canary-service",
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "author": "Joe MacMahon <joe@macmahon.eu>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.3",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "tslint": "^5.10.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.0",
+    "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
+    "build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
+    "build": "npm run build:commonjs && npm run build:es",
+    "ts": "ts-node src/",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
+  "jsnext:main": "./es/index.js",
+  "module": "./es/index.js"
+}
