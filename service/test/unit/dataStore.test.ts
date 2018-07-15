@@ -1,6 +1,8 @@
-import { random } from '../random'
+import createRandom from 'reproducible-random'
 import { DataStore, User } from '../../src/dataStore'
 import { expect } from 'chai'
+
+const random = createRandom()
 
 describe('data store', () => {
   describe('registration', () => {

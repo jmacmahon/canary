@@ -15,7 +15,7 @@
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
     "mocha": "^5.2.0",
-    "random-js": "^1.0.8",
+    "reproducible-random": "^2.0.0",
     "tslint": "^5.10.0",
     "tslint-config-standard": "^7.1.0"
   },
